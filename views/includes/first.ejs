@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="css/main.css">
+    <%if (needProductCss) {%>
+        <link rel="stylesheet" href="css/product.css">
+    <%}%>
+    <%if (needFormsCss) {%>
+        <link rel="stylesheet" href="css/forms.css">
+    <%}%>
+</head>
+<body>
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item"><a class="<%=whichActive === 'admin' ? 'active' : ''%>" href="/">Add User</a></li>
+            <li class="main-header__item"><a class="<%=whichActive === 'users' ? 'active' : ''%>" href="/users">Users</a></li>
+        </ul>
+    </nav>
+</header>
